@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../components/home/hero/Hero";
+import Hero, { New } from "../components/home/hero/Hero";
 import LearnMore from "../components/home/learn-more/LearnMore";
 import GetStarted from "../components/home/get-started/GetStarted";
 import Project from "../components/home/project/Project";
@@ -10,6 +10,7 @@ const Home = () => {
     <div>
       {/* Hero */}
       <Hero />
+      <New />
       {/* learn more */}
       <LearnMore />
       {/* get started */}

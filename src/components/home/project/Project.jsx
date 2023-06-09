@@ -1,7 +1,8 @@
 import React from "react";
+import Title from "../../common/Title";
 
 const Project = () => {
-  return <div>Project</div>;
+  return <Title title={"Project"} />;
 };
 
 export default Project;
