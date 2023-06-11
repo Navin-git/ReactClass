@@ -5,7 +5,8 @@ import GetStarted from "../components/home/get-started/GetStarted";
 import Project from "../components/home/project/Project";
 import NewsLetter from "../components/home/news-letter/NewsLetter";
 
-const Home = () => {
+const Home = ({ login }) => {
+  const name = "John Dev";
   return (
     <div>
       {/* Hero */}
@@ -14,11 +15,11 @@ const Home = () => {
       {/* learn more */}
       <LearnMore />
       {/* get started */}
-      <GetStarted />
+      <GetStarted name={name} login={login} />
       {/* project */}
       <Project />
       {/* news letter */}
-      <NewsLetter />
+      <NewsLetter name={name} login={login} />
     </div>
   );
 };
