@@ -9,6 +9,7 @@ const GetStarted = ({ login, name }) => {
         style={{
           textAlign: "center",
         }}
+        className="text-red-500"
       >
         Hello {login ? name : "User"}
       </p>

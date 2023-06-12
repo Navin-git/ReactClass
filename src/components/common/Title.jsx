@@ -1,18 +1,10 @@
 import React from "react";
 
-const Title = ({ title }) => {
+const Title = ({ title, className }) => {
   return (
-    <div
-      style={{
-        fontSize: "2rem",
-        fontWeight: "bold",
-        textAlign: "center",
-        margin: "2rem 0",
-        color: "#333",
-      }}
-    >
+    <h1 className={`text-2xl font-bold text-center text-blue-500 ${className}`}>
       {title}
-    </div>
+    </h1>
   );
 };
 
