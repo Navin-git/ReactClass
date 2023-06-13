@@ -12,7 +12,17 @@ const Counter = () => {
       >
         Add
       </button>
-      <p className="text-xl text-blue-500">{num}</p>
+      <p
+        className={`text-xl  ${
+          num < 0
+            ? "text-red-500"
+            : num > 0
+            ? "text-green-500"
+            : "text-blue-500"
+        }`}
+      >
+        {num}
+      </p>
       <button
         onClick={() => {
           setNum(num - 1);
