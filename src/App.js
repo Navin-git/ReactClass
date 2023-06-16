@@ -2,8 +2,9 @@ import "./App.css";
 import Footer from "./components/static/Footer";
 import Navbar from "./components/static/Navbar";
 import Sidebar from "./components/static/Sidebar";
+import About from "./pages/About";
 // import Counter from "./pages/Counter";
-import SignUp from "./pages/SignUp";
+// import SignUp from "./pages/SignUp";
 // import Home from "./pages/Home";
 
 const App = () => {
@@ -15,7 +16,8 @@ const App = () => {
         <Navbar />
         {/* <Home login={login} /> */}
         {/* <Counter /> */}
-        <SignUp />
+        {/* <SignUp /> */}
+        <About />
         <Footer />
       </div>
     </div>
