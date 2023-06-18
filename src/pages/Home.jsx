@@ -11,15 +11,17 @@ const Home = ({ login }) => {
     <div>
       {/* Hero */}
       <Hero />
-      <New />
-      {/* learn more */}
-      <LearnMore />
+      {/* <New /> */}
+
       {/* get started */}
       <GetStarted name={name} login={login} />
-      {/* project */}
-      <Project />
+      {/* learn more */}
+      <LearnMore />
+
       {/* news letter */}
       <NewsLetter name={name} login={login} />
+      {/* project */}
+      <Project />
     </div>
   );
 };

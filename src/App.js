@@ -1,26 +1,15 @@
-import "./App.css";
-import Footer from "./components/static/Footer";
+import React from "react";
 import Navbar from "./components/static/Navbar";
-import Sidebar from "./components/static/Sidebar";
-import About from "./pages/About";
-// import Counter from "./pages/Counter";
-// import SignUp from "./pages/SignUp";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
+import Footer from "./components/static/Footer";
 
 const App = () => {
-  // const login = true;
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="flex-1">
-        <Navbar />
-        {/* <Home login={login} /> */}
-        {/* <Counter /> */}
-        {/* <SignUp /> */}
-        <About />
-        <Footer />
-      </div>
-    </div>
+    <main>
+      <Navbar />
+      <Home />
+      <Footer />
+    </main>
   );
 };
 
