@@ -1,14 +1,19 @@
 import React from "react";
-import Navbar from "./components/static/Navbar";
 import Home from "./pages/Home";
-import Footer from "./components/static/Footer";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/static/Layout";
 
 const App = () => {
   return (
     <main>
-      <Navbar />
-      <Home />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<></>} />
+          <Route path="contact" element={<></>} />
+          <Route path="*" element={<></>} />
+        </Route>
+      </Routes>
     </main>
   );
 };

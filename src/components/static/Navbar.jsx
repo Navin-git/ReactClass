@@ -15,6 +15,10 @@ const Navbar = () => {
       link: "/contact",
     },
     {
+      title: "Hire me",
+      link: "/hire-me",
+    },
+    {
       title: "Login",
       link: "/login",
     },
