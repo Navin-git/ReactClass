@@ -1,7 +1,8 @@
 import React from "react";
 import Home from "./pages/Home";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import Layout from "./components/static/Layout";
+import Title from "./components/common/Title";
 
 const App = () => {
   return (
@@ -9,9 +10,20 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="blogs" element={<></>} />
-          <Route path="contact" element={<></>} />
-          <Route path="*" element={<></>} />
+          <Route
+            path="about"
+            element={
+              <div>
+                <h1>about</h1>
+                <Outlet />
+              </div>
+            }
+          >
+            <Route path="details" element={<>details</>} />
+            <Route path="detail" element={<>detail</>} />
+          </Route>
+          <Route path="blog" element={<Title title={"Blog"} />} />
+          <Route path="*" element={<>Not found</>} />
         </Route>
       </Routes>
     </main>

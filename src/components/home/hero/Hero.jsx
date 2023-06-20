@@ -1,6 +1,7 @@
 import React from "react";
 import "../../assets/style/hero.css";
 import Title from "../../common/Title";
+import { img1 } from "../../assets/images";
 
 const Hero = () => {
   return (
@@ -17,11 +18,7 @@ const Hero = () => {
             Get Started
           </button>
         </div>
-        <img
-          className="hero-img"
-          src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/14/yvA5SpUH-IMG-Worlds-1200x800.jpg"
-          alt="hero"
-        />
+        <img className="hero-img" src={img1} alt="hero" />
       </div>
     </>
   );
