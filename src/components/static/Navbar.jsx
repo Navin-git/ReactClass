@@ -1,5 +1,6 @@
 import React from "react";
 import { Bar3, DevicePhoneMobile } from "../assets/icons";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const NavList = [
@@ -37,12 +38,12 @@ const Navbar = () => {
         {NavList.map((item, index) => {
           return (
             <li key={index}>
-              <a
-                href={item.link}
+              <Link
+                to={item.link}
                 className="hover:text-blue-600 duration-300 text-lg "
               >
                 {item.title}
-              </a>
+              </Link>
             </li>
           );
         })}
