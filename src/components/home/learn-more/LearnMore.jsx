@@ -3,8 +3,8 @@ import Title from "../../common/Title";
 
 const LearnMore = () => {
   return (
-    <div className="flex items-center p-10 ">
-      <div className="w-[50%] flex-shrink-0 space-y-5">
+    <div className="flex flex-col md:flex-row gap-4 items-center p-10 ">
+      <div className="md:w-[50%] flex-shrink-0 space-y-5">
         <Title title={"Learn More"} className={"text-black text-start"} />
         <p className="max-w-[500px]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

@@ -3,8 +3,8 @@ import Title from "../../common/Title";
 
 const NewsLetter = () => {
   return (
-    <div className="flex items-center flex-row-reverse justify-between p-10 ">
-      <div className=" flex-shrink-0 space-y-5">
+    <div className="flex flex-col md:flex-row-reverse items-center gap-4  justify-between p-10 ">
+      <div className=" flex-shrink-0 md:w-[50%]  space-y-5">
         <Title title={"News Letter"} className={"text-black text-start"} />
         <p className="max-w-[500px]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
@@ -15,7 +15,7 @@ const NewsLetter = () => {
           Read News Letter
         </button>
       </div>
-      <div className="w-[50%]">
+      <div className="flex-1 flex-shrink-0">
         <img
           src="https://www.imgacademy.com/sites/default/files/ncsa-homepage-row-2022.jpg"
           alt=""
