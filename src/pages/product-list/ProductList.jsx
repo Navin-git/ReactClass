@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Project from "../../components/home/project/Project";
+import axios from "axios";
 
 const ProductList = () => {
   return (
