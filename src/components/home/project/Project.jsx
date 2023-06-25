@@ -58,7 +58,7 @@ const Project = () => {
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
         console.log(res);
-        setProjectList(res.data);
+        setProjectList(res?.data);
       })
       .catch((err) => {
         console.log(err);
@@ -74,23 +74,23 @@ const Project = () => {
         fc
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
-        {projectList.map((item, index) => {
+        {projectList.map((item) => {
           return (
             <Link
-              to={`/product/${item.title}/${item.id}`}
-              key={index}
+              to={`/product/${item?.title}/${item?.id}`}
+              key={item?.id}
               className="bg-slate-100 overflow-hidden rounded-lg"
             >
               <img src={img1} alt="" className="w-full object-cover" />
               <div className="m-2">
                 <div className="flex gap-2 justify-between">
                   <h1 className="text-lg text-gray-700 font-semibold">
-                    {item.title}
+                    {item?.title}
                   </h1>
-                  <p className="text-gray-500">{item.userId}</p>
+                  <p className="text-gray-500">{item?.userId}</p>
                 </div>
 
-                <p className="text-gray-500">{item.body}</p>
+                <p className="text-gray-500">{item?.body}</p>
               </div>
             </Link>
           );

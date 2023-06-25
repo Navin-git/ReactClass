@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { img1 } from "../../components/assets/images";
 
 const ProductDetails = () => {
@@ -14,10 +14,11 @@ const ProductDetails = () => {
       .get(`https://jsonplaceholder.typicode.com/posts/${slug}`)
       .then((res) => {
         console.log(res);
-        setDetail(res.data);
+        setDetail(res?.data);
       })
       .catch((err) => {
         console.log(err);
+        navigate("/product");
       });
   }, [slug]);
   return (
