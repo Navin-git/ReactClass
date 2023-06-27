@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Title from "../../common/Title";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { img1 } from "../../assets/images";
+import { TrashIcon } from "../../assets/icons";
 
 const Project = () => {
+  const navigate = useNavigate();
   // const projectList = [
   //   {
   //     title: "title",
@@ -64,6 +66,10 @@ const Project = () => {
         console.log(err);
       });
   }, []);
+  const deletePost = (e) => {
+    e.stopPropagation();
+    console.log();
+  };
   return (
     <div className="flex justify-center items-center space-y-3 flex-col">
       <Title title={"Project"} className={"text-black text-center "} />
@@ -76,8 +82,10 @@ const Project = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-10">
         {projectList.map((item) => {
           return (
-            <Link
-              to={`/product/${item?.title}/${item?.id}`}
+            <button
+              onClick={() => {
+                navigate(`/product/${item?.title}/${item?.id}`);
+              }}
               key={item?.id}
               className="bg-slate-100 overflow-hidden rounded-lg"
             >
@@ -87,12 +95,14 @@ const Project = () => {
                   <h1 className="text-lg text-gray-700 font-semibold">
                     {item?.title}
                   </h1>
-                  <p className="text-gray-500">{item?.userId}</p>
+                  <button onClick={deletePost}>
+                    <TrashIcon className="h-5 w-5" />
+                  </button>
                 </div>
 
                 <p className="text-gray-500">{item?.body}</p>
               </div>
-            </Link>
+            </button>
           );
         })}
       </div>

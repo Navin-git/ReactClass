@@ -5,6 +5,7 @@ import Layout from "./components/static/Layout";
 import Title from "./components/common/Title";
 import ProductList from "./pages/product-list/ProductList";
 import ProductDetails from "./pages/product-list/ProductDetails";
+import SignUp from "./pages/SignUp";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="hire-me" element={<Title title={"Hire me"} />} />
           <Route path="*" element={<>Not found</>} />
         </Route>
+        <Route path="login" element={<SignUp />} />
       </Routes>
     </main>
   );

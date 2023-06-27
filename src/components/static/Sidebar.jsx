@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavList } from "./Navbar";
 import { Link } from "react-router-dom";
-import { DevicePhoneMobile } from "../assets/icons";
 
 const Sidebar = ({ open, setOpen }) => {
   return (
@@ -12,10 +11,10 @@ const Sidebar = ({ open, setOpen }) => {
     >
       <button
         onClick={() => {
-          setOpen(!open);
+          setOpen(false);
         }}
       >
-        <DevicePhoneMobile className="h-5 w-5" />
+        {"close"}
       </button>
       <div>
         <ul className="flex flex-col items-center justify-center h-[80vh] gap-4">

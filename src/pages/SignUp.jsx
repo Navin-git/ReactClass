@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const SignUp = () => {
@@ -48,6 +49,31 @@ const SignUp = () => {
   useEffect(() => {
     if (isvalided && Object.keys(errors).length === 0) {
       console.log("submited value", input);
+      axios
+        .patch(
+          `https://jsonplaceholder.typicode.com/posts/${1}`,
+          {
+            title: input.name,
+            body: input.email,
+            userId: input.password,
+          },
+          {
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          }
+        )
+        .then((res) => {
+          console.log(res.data);
+          setInput({
+            name: "",
+            email: "",
+            password: "",
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isvalided, errors]);
