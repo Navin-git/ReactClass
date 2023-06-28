@@ -1,11 +1,11 @@
 import React from "react";
-import { NavList } from "./Navbar";
 import { Link } from "react-router-dom";
+import { NavList } from "./Navbar";
 
 const Sidebar = ({ open, setOpen }) => {
   return (
     <div
-      className={`bg-gray-100 block sm:hidden overflow-hidden absolute top-0  h-full z-[9999] duration-300 border-gray-300 ${
+      className={`bg-gray-100 block sm:hidden overflow-hidden fixed top-0  h-screen z-[9999] duration-300 border-gray-300 ${
         open ? "w-64 border-r" : "w-0"
       }`}
     >

@@ -1,5 +1,5 @@
 import React from "react";
-import { Bar3, DevicePhoneMobile } from "../assets/icons";
+import { Bar3 } from "../assets/icons";
 import { Link } from "react-router-dom";
 export const NavList = [
   {
@@ -50,7 +50,7 @@ const Navbar = ({ open, setOpen }) => {
         onClick={() => {
           setOpen(!open);
         }}
-        className="flex sm:hidden"
+        className="block sm:hidden"
       >
         <Bar3 className="h-4 w-4 text-red-500" />
       </button>

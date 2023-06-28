@@ -6,6 +6,7 @@ import Title from "./components/common/Title";
 import ProductList from "./pages/product-list/ProductList";
 import ProductDetails from "./pages/product-list/ProductDetails";
 import SignUp from "./pages/SignUp";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
           <Route path="product" element={<ProductList />} />
           <Route path="product/:name/:slug" element={<ProductDetails />} />
           <Route path="blog" element={<Title title={"Blog"} />} />
-          <Route path="contact" element={<Title title={"Contact"} />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="hire-me" element={<Title title={"Hire me"} />} />
           <Route path="*" element={<>Not found</>} />
         </Route>
