@@ -55,7 +55,7 @@ const Project = () => {
   //   },
   // ];
   const [projectList, setProjectList] = useState([]);
-  useEffect(() => {
+  const getData = () => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
@@ -65,10 +65,21 @@ const Project = () => {
       .catch((err) => {
         console.log(err);
       });
+  };
+  useEffect(() => {
+    getData();
   }, []);
-  const deletePost = (e) => {
+  const deletePost = (e, id) => {
     e.stopPropagation();
-    console.log();
+    axios
+      .delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      .then((res) => {
+        console.log(res.data);
+        getData();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div className="flex justify-center items-center space-y-3 flex-col">
@@ -95,7 +106,7 @@ const Project = () => {
                   <h1 className="text-lg text-gray-700 font-semibold">
                     {item?.title}
                   </h1>
-                  <button onClick={deletePost}>
+                  <button onClick={(e) => deletePost(e, item?.id)}>
                     <TrashIcon className="h-5 w-5" />
                   </button>
                 </div>

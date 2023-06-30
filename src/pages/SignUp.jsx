@@ -49,6 +49,10 @@ const SignUp = () => {
   useEffect(() => {
     if (isvalided && Object.keys(errors).length === 0) {
       console.log("submited value", input);
+      // put remove previous data and add new one
+
+      // patch replace new value with old one and others value as it is
+
       axios
         .patch(
           `https://jsonplaceholder.typicode.com/posts/${1}`,
