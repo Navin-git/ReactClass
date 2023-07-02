@@ -14,7 +14,7 @@ const Hero = () => {
             voluptatum, quibusdam, quia, quos voluptates voluptate quod
             voluptatibus quas doloribus quidem fugit. Quisquam voluptatum,
           </p>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded-md mt-4 hover:bg-blue-600 duration-300">
+          <button className="px-4 py-2 bg-primary text-white rounded-md mt-4 hover:bg-blue-600 duration-300">
             Get Started
           </button>
         </div>
