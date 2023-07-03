@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   // create state for input field with initial value
@@ -69,6 +70,7 @@ const SignUp = () => {
         )
         .then((res) => {
           console.log(res.data);
+          toast.success("posted");
           setInput({
             name: "",
             email: "",
@@ -77,6 +79,7 @@ const SignUp = () => {
         })
         .catch((err) => {
           console.log(err);
+          toast.error("Something went wrong");
         });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

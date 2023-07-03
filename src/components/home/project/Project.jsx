@@ -82,7 +82,7 @@ const Project = () => {
       });
   };
   return (
-    <div className="flex justify-center items-center space-y-3 flex-col">
+    <div className="flex dark:bg-gray-700 justify-center items-center space-y-3 flex-col">
       <Title title={"Project"} className={"text-black text-center "} />
       <p className="max-w-[700px] text-center ">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

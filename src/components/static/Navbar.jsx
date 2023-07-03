@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Bar3 } from "../assets/icons";
 import { Link } from "react-router-dom";
+import Toggle from "../common/Toggle";
 export const NavList = [
   {
     title: "Home",
@@ -23,10 +24,10 @@ export const NavList = [
     link: "/login",
   },
 ];
-const Navbar = ({ open, setOpen }) => {
+const Navbar = ({ open, setOpen, setDark, dark }) => {
   const [drop, setDrop] = useState(false);
   return (
-    <nav className="py-2 z-[999] sticky top-0 px-4 bg-slate-200 flex justify-between items-center">
+    <nav className="py-2 z-[999] sticky top-0 px-4 bg-slate-200  dark:bg-gray-700 dark:text-white flex justify-between items-center">
       {/* <DevicePhoneMobile className="h-5 w-5" /> */}
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRUsQiplH_OWtHnMb1Nrk31z58OJN009JG-w&usqp=CAU"
@@ -74,6 +75,13 @@ const Navbar = ({ open, setOpen }) => {
           )}
         </div>
       </ul>
+      <button
+        onClick={() => {
+          setDark((pre) => !pre);
+        }}
+      >
+        <Toggle dark={dark} />
+      </button>
       <button
         onClick={() => {
           setOpen(!open);
