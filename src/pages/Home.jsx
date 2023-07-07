@@ -4,6 +4,7 @@ import LearnMore from "../components/home/learn-more/LearnMore";
 import GetStarted from "../components/home/get-started/GetStarted";
 import Project from "../components/home/project/Project";
 import NewsLetter from "../components/home/news-letter/NewsLetter";
+import Timeline from "../components/common/Timeline";
 
 const Home = ({ login }) => {
   const name = "John Dev";
@@ -11,6 +12,9 @@ const Home = ({ login }) => {
     <div>
       {/* Hero */}
       <Hero />
+
+      {/* Timeline */}
+      <Timeline />
       {/* <New /> */}
 
       {/* get started */}

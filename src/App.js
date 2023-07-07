@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp";
 import Contact from "./pages/Contact";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Timeline from "./components/common/Timeline";
 
 const App = () => {
   const [dark, setDark] = useState(true);
@@ -34,8 +35,8 @@ const App = () => {
             path="about"
             element={
               <div>
-                <h1>about</h1>
                 <Outlet />
+                <Timeline />
               </div>
             }
           >
